@@ -1,0 +1,103 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Interpretador de gram'#225'tica'
+  ClientHeight = 205
+  ClientWidth = 692
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 692
+    Height = 205
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 529
+    ExplicitHeight = 289
+    object lblResultado: TLabel
+      Left = 16
+      Top = 74
+      Width = 52
+      Height = 13
+      Caption = 'Resultado:'
+    end
+    object lblPilha: TLabel
+      Left = 372
+      Top = 7
+      Width = 22
+      Height = 13
+      Caption = 'Pilha'
+    end
+    object btnGerar1: TBitBtn
+      Left = 272
+      Top = 62
+      Width = 65
+      Height = 25
+      Caption = 'Gerar'
+      TabOrder = 0
+      OnClick = btnGerar1Click
+    end
+    object txt1: TMemo
+      Left = 16
+      Top = 8
+      Width = 201
+      Height = 37
+      Lines.Strings = (
+        'txt1')
+      TabOrder = 1
+    end
+    object txtResultado: TMemo
+      Left = 16
+      Top = 91
+      Width = 321
+      Height = 105
+      Lines.Strings = (
+        'txtResultado')
+      TabOrder = 2
+    end
+    object btnAddGramatica: TBitBtn
+      Left = 223
+      Top = 20
+      Width = 114
+      Height = 25
+      Caption = 'Adicionar Gram'#225'tica'
+      TabOrder = 3
+    end
+    object StringGridPilha: TStringGrid
+      Left = 372
+      Top = 20
+      Width = 309
+      Height = 176
+      TabOrder = 4
+      RowHeights = (
+        24
+        24
+        24
+        24
+        24)
+    end
+  end
+  object DsPilha: TDataSource
+    Left = 232
+    Top = 112
+  end
+  object TbPilha: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 192
+    Top = 112
+    object TbPilhagramatica: TStringField
+      FieldName = 'gramatica'
+      Size = 30
+    end
+  end
+end
