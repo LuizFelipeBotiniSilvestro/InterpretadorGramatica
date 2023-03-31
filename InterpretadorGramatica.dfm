@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Interpretador de gram'#225'tica'
-  ClientHeight = 205
-  ClientWidth = 347
+  ClientHeight = 338
+  ClientWidth = 774
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,11 +17,15 @@ object Form1: TForm1
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 347
-    Height = 205
+    Width = 774
+    Height = 338
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 692
+    ExplicitWidth = 347
+    ExplicitHeight = 205
+    DesignSize = (
+      774
+      338)
     object lblResultado: TLabel
       Left = 16
       Top = 74
@@ -56,6 +60,16 @@ object Form1: TForm1
         'txtResultado')
       TabOrder = 2
     end
+    object StringGridPilha: TStringGrid
+      Left = 352
+      Top = 8
+      Width = 409
+      Height = 313
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      ColCount = 100
+      RowCount = 100
+      TabOrder = 3
+    end
   end
   object DsPilha: TDataSource
     Left = 232
@@ -70,5 +84,20 @@ object Form1: TForm1
       FieldName = 'gramatica'
       Size = 30
     end
+  end
+  object TbPilhaAux: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 432
+    Top = 128
+    object TbPilhaAuxgramatica: TStringField
+      FieldName = 'gramatica'
+      Size = 30
+    end
+  end
+  object DsPilhaAux: TDataSource
+    DataSet = TbPilhaAux
+    Left = 512
+    Top = 128
   end
 end
